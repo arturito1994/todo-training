@@ -122,6 +122,46 @@
           }
         }
       }
+    },
+    "hobbici": {
+      "projectType": "library",
+      "root": "projects/hobbici",
+      "sourceRoot": "projects/hobbici/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "tsConfig": "projects/hobbici/tsconfig.lib.json",
+            "project": "projects/hobbici/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/hobbici/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/hobbici/src/test.ts",
+            "tsConfig": "projects/hobbici/tsconfig.spec.json",
+            "karmaConfig": "projects/hobbici/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/hobbici/tsconfig.lib.json",
+              "projects/hobbici/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "defaultProject": "todo-training"
