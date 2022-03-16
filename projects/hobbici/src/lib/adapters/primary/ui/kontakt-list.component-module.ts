@@ -1,8 +1,9 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { KontaktListComponent } from './kontakt-list.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
-@NgModule({ imports: [CommonModule],
+@NgModule({ imports: [CommonModule, ReactiveFormsModule],
   	declarations: [KontaktListComponent],
   	providers: [],
   	exports: [KontaktListComponent] })
