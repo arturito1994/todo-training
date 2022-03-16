@@ -4,6 +4,7 @@ import { HomePageModule } from './pages/home.page-module';
 import { AboutUsPageModule } from './pages/about-us.page-module';
 import { PracownicyPageModule } from './pages/pracownicy.page-module';
 import { EmployeeDetailPageModule } from './pages/employee-detail.page-module';
+import { KontaktPageModule } from './pages/kontakt.page-module';
 
 const routes: Routes = [{ 
         path: 'home', 
@@ -20,6 +21,10 @@ const routes: Routes = [{
   { 
         path: 'hobbici/:name', 
         loadChildren: () => EmployeeDetailPageModule
+      },
+  { 
+        path: 'kontakt', 
+        loadChildren: () => KontaktPageModule
       }
 ];
 
