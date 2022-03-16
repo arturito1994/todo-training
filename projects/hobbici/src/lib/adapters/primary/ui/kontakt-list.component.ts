@@ -2,4 +2,8 @@ import { Component, ViewEncapsulation, ChangeDetectionStrategy } from '@angular/
 
 @Component({ selector: 'lib-kontakt-list', templateUrl: './kontakt-list.component.html', encapsulation: ViewEncapsulation.None, changeDetection: ChangeDetectionStrategy.OnPush })
 export class KontaktListComponent {
+    autor="Kliknij na mnie";
+    onclick(){
+        this.autor="Strona Artura"
+    }
 }
