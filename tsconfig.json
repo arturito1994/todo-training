@@ -10,7 +10,8 @@
       "hobbici": [
         "dist/hobbici/hobbici",
         "dist/hobbici"
-      ]
+      ],
+      "@hobbici": ["projects/hobbici/src/public-api.ts"]
     },
     "downlevelIteration": true,
     "experimentalDecorators": true,
