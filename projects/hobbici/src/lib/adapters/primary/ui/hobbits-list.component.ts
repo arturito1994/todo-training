@@ -8,19 +8,19 @@ export class HobbitsListComponent {
         {
            id:"1",
            name: "Frodo",
-           bio: 'lorem',
+           bio: 'Tutaj opis Froda',
            imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS20MsuUVAVx_n8_-N9Y_xM7X_0LJhqoa3n7WDztBbzACpVO4MH_eSlyY3YQOBa51xrOnY&usqp=CAU'
         },
         {
             id:"2",
             name: "Sam",
-            bio: 'lorem',
+            bio: 'Tutaj opis Sama',
             imageUrl: 'https://fwcdn.pl/fph/10/65/1065/447278.2.jpg'
          },
          {
             id:"3",
             name: "Bilbo",
-            bio: 'lorem',
+            bio: 'Tutaj Opis Bilba',
             imageUrl: 'https://img.wprost.pl/img/ian-holm-jako-bilbo-baggins-w-filmie-wladca-pierscieni-druzyna-pierscienia/3c/35/188fd402e7c93ca560ba01742239.png'
          },
     ])
