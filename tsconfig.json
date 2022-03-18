@@ -11,7 +11,13 @@
         "dist/hobbici/hobbici",
         "dist/hobbici"
       ],
-      "@hobbici": ["projects/hobbici/src/public-api.ts"]
+      "@hobbici": [
+        "projects/hobbici/src/public-api.ts"
+      ],
+      "navigation": [
+        "dist/navigation/navigation",
+        "dist/navigation"
+      ]
     },
     "downlevelIteration": true,
     "experimentalDecorators": true,
