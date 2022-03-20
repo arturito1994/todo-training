@@ -3,6 +3,8 @@
             <img [src]="hobbits.imageUrl" class="card-img-top" [alt]="hobbits.name">
             <div class="card-body">
                 <h5 class="card-title">{{hobbits.name}}</h5>
+                <h5 class="card-title">{{hobbits.department.name}}</h5>
+                <h5 class="card-title">{{hobbits.department.empoyeeCount}}</h5>
               <p class="card-text">{{hobbits.bio}}</p>
               <a href="hobbici/{{hobbits.name}}" class="btn btn-primary">Szczegóły</a>
             </div>      
