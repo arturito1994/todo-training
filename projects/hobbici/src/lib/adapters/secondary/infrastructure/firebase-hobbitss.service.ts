@@ -12,7 +12,7 @@ export class FirebaseHobbitssService implements GetsAllHobbitsDtoPort {
 
   getAll(criterion: Partial<HobbitsDTO>): Observable<HobbitsDTO[]> {
     return this._client
-      .collection<HobbitsDTO>('hobbits')
+      .collection<HobbitsDTO>('hobbits-list')
       .valueChanges({ idField: 'id' })
       .pipe(map((data: HobbitsDTO[]) => filterByCriterion(data, criterion)));
   }

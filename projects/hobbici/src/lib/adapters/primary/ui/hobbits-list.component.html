@@ -1,5 +1,5 @@
   <div class="row">
-        <div class="row" style="width: 20rem;" *ngFor="let hobbits of hobbits$ | async">
+        <div class="row" style="width: 20rem;" *ngFor="let hobbits of zmiany$ | async">
             <img [src]="hobbits.imageUrl" class="card-img-top" [alt]="hobbits.name">
             <div class="card-body">
                 <h5 class="card-title">{{hobbits.name}}</h5>
@@ -9,4 +9,3 @@
               <a href="hobbici/{{hobbits.name}}" class="btn btn-primary">Szczegóły</a>
             </div>      
          </div>
-         
