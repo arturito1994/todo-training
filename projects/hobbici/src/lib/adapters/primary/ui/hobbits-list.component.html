@@ -1,11 +1,12 @@
-  <div class="row">
-        <div class="row" style="width: 20rem;" *ngFor="let hobbits of zmiany$ | async">
-            <img [src]="hobbits.imageUrl" class="card-img-top" [alt]="hobbits.name">
-            <div class="card-body">
-                <h5 class="card-title">{{hobbits.name}}</h5>
-                <h5 class="card-title">{{hobbits.department.name}}</h5>
-                <h5 class="card-title">{{hobbits.department.empoyeeCount}}</h5>
-              <p class="card-text">{{hobbits.bio}}</p>
-              <a href="hobbici/{{hobbits.name}}" class="btn btn-primary">Szczegóły</a>
-            </div>      
-         </div>
+<div class="row">
+  <div class="row" style="width: 20rem" *ngFor="let hobbits of zmiany$ | async">
+    <img [src]="hobbits.imageUrl" class="card-img-top" [alt]="hobbits.name" />
+    <div class="card-body">
+      <h5 class="card-title">{{ hobbits.name }}</h5>
+      <h5 class="card-title">{{ hobbits.bio }}</h5>
+      <h5 class="card-title">{{ hobbits.empoyeeCount }}</h5>
+
+      <a href="hobbici/{{ hobbits.name }}" class="btn btn-primary">Szczegóły</a>
+    </div>
+  </div>
+</div>
