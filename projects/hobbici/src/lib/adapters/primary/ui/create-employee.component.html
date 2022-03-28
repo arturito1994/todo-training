@@ -1,0 +1,12 @@
+<h1>Create Employee</h1>
+
+<form
+  [formGroup]="createEmployee"
+  (ngSubmit)="onCreateEmployeeSubmited(createEmployee)"
+>
+  <input type="text" formControlName="name" placeholder="Name" />
+  <input type="text" formControlName="bio" placeholder="bio" />
+  <input type="text" formControlName="imageUrl" placeholder="Image Url" />
+
+  <input type="submit" value="Submit" />
+</form>
