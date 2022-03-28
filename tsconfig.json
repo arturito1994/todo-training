@@ -14,6 +14,10 @@
       "@hobbici": [
         "projects/hobbici/src/public-api.ts"
       ],
+      "messages": [
+        "dist/messages/messages",
+        "dist/messages"
+      ],
       "navigation": [
         "dist/navigation/navigation",
         "dist/navigation"
