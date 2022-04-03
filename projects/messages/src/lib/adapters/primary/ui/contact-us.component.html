@@ -1,0 +1,15 @@
+<h1 (click)="submit(contact)">{{ name1 }}</h1>
+<h1 (click)="submit(contact)">{{ name2 }}</h1>
+<h1 (click)="submit(contact)">{{ name3 }}</h1>
+<h1 (click)="submit(contact)">{{ name4 }}</h1>
+<form (ngSubmit)="submit(contact)" [formGroup]="contact">
+  <input type="text" formControlName="name" placeholder="Name" /><input
+    type="text"
+    formControlName="surname"
+    placeholder="Surname"
+  /><input type="text" formControlName="email" placeholder="Email" /><input
+    type="text"
+    formControlName="number"
+    placeholder="Number"
+  /><input type="submit" value="Submit" />
+</form>
