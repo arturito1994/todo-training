@@ -7,34 +7,35 @@ import { EmployeeDetailPageModule } from './pages/employee-detail.page-module';
 import { KontaktPageModule } from './pages/kontakt.page-module';
 import { AdminPageModule } from './pages/admin.page-module';
 
-const routes: Routes = [{ 
-        path: 'home', 
-        loadChildren: () => HomePageModule
-      },
-  { 
-        path: 'about-us', 
-        loadChildren: () => AboutUsPageModule
-      },
-  { 
-        path: 'hobbici', 
-        loadChildren: () => PracownicyPageModule
-      },
-  { 
-        path: 'hobbici/:name', 
-        loadChildren: () => EmployeeDetailPageModule
-      },
-  { 
-        path: 'kontakt', 
-        loadChildren: () => KontaktPageModule
-      },
-  { 
-        path: 'admin', 
-        loadChildren: () => AdminPageModule
-      }
+const routes: Routes = [
+  {
+    path: 'home',
+    loadChildren: () => HomePageModule,
+  },
+  {
+    path: 'about-us',
+    loadChildren: () => AboutUsPageModule,
+  },
+  {
+    path: 'hobbici',
+    loadChildren: () => PracownicyPageModule,
+  },
+  {
+    path: 'hobbici',
+    loadChildren: () => EmployeeDetailPageModule,
+  },
+  {
+    path: 'kontakt',
+    loadChildren: () => KontaktPageModule,
+  },
+  {
+    path: 'admin',
+    loadChildren: () => AdminPageModule,
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
