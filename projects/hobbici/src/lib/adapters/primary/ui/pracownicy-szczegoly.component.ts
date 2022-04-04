@@ -10,6 +10,7 @@ import {
   GETS_ONE_HOBBITS_DTO,
   GetsOneHobbitsDtoPort,
 } from '../../../application/ports/secondary/gets-one-hobbits.dto-port';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'lib-pracownicy-szczegoly',
@@ -19,11 +20,12 @@ import {
 })
 export class PracownicySzczegolyComponent {
   hobbit$: Observable<HobbitsDTO> = this._getsOneHobbitsDto.getOne(
-    'i8RFU3Se9LI1hxodUpcL'
+    this._activatedRoute.snapshot.params.hobbitId
   );
 
   constructor(
     @Inject(GETS_ONE_HOBBITS_DTO)
-    private _getsOneHobbitsDto: GetsOneHobbitsDtoPort
+    private _getsOneHobbitsDto: GetsOneHobbitsDtoPort,
+    private _activatedRoute: ActivatedRoute
   ) {}
 }
