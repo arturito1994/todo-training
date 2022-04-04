@@ -12,10 +12,10 @@ import { FormGroup, FormControl } from '@angular/forms';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ContactUsComponent {
-  name1 = 'wpisz name';
-  name2 = 'wpisz surname';
-  name3 = 'wpisz email';
-  name4 = 'wpisz number';
+  name1 = '';
+  name2 = '';
+  name3 = '';
+  name4 = '';
   readonly contact: FormGroup = new FormGroup({
     name: new FormControl(),
     surname: new FormControl(),
@@ -27,5 +27,6 @@ export class ContactUsComponent {
     this.name2 = contact.get('surname').value;
     this.name3 = contact.get('email').value;
     this.name4 = contact.get('number').value;
+    alert('WYGENEROWANO LISTE');
   }
 }
