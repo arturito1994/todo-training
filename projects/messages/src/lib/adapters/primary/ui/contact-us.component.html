@@ -1,16 +1,14 @@
-<h1 (click)="submit(contact)">{{ name1 }}</h1>
-<h1 (click)="submit(contact)">{{ name2 }}</h1>
-<h1 (click)="submit(contact)">{{ name3 }}</h1>
-<h1 (click)="submit(contact)">{{ name4 }}</h1>
-<form (ngSubmit)="submit(contact)" [formGroup]="contact">
-  <input type="text" formControlName="name" placeholder="Name" /><input
-    type="text"
-    formControlName="surname"
-    placeholder="Surname"
-  /><input type="text" formControlName="email" placeholder="Email" /><input
-    type="text"
-    formControlName="number"
-    placeholder="Number"
-  /><input type="submit" value="Submit" />
+<form [formGroup]="contact" (ngSubmit)="onContactSubmited(contact)">
+  <input type="text" formControlName="bio" placeholder="email" />
+  <input type="text" formControlName="name" placeholder="wiadomość" />
+  <input type="submit" value="Submit" />
 </form>
-<ul><li *ngFor="let item of messages$ | async">{{ item | json }}</li></ul>
+
+<div class="list-group">
+  <div class="row" *ngFor="let messages of messages$ | async">
+    <div class="card-body">
+      <h5 class="card-title">{{ messages.bio }}</h5>
+      <h6 class="card-title">{{ messages.name }}</h6>
+    </div>
+  </div>
+</div>
