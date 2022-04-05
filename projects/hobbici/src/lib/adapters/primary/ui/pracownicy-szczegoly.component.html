@@ -1,1 +1,8 @@
 {{ hobbit$ | async | json }}
+
+<div class="container-fluid">
+  <h1>{{ (hobbit$ | async)?.name }}</h1>
+  <img src="{{ (hobbit$ | async)?.imageUrl }}" class="img-fluid" alt="..." />
+  <h1>{{ (hobbit$ | async)?.bio }}</h1>
+  <h1></h1>
+</div>
