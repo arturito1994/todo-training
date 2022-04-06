@@ -4,7 +4,6 @@ import { RouterModule } from '@angular/router';
 import { EmployeeDetailPage } from './employee-detail.page';
 import { PracownicySzczegolyComponentModule } from '../../../projects/hobbici/src/lib/adapters/primary/ui/pracownicy-szczegoly.component-module';
 import { FirebaseHobbitssServiceModule } from '../../../projects/hobbici/src/lib/adapters/secondary/infrastructure/firebase-hobbitss.service-module';
-import { InMemoryContextStorageModule } from '@hobbici';
 
 @NgModule({
   imports: [
@@ -17,7 +16,6 @@ import { InMemoryContextStorageModule } from '@hobbici';
     ]),
     PracownicySzczegolyComponentModule,
     FirebaseHobbitssServiceModule,
-    InMemoryContextStorageModule,
   ],
   declarations: [EmployeeDetailPage],
   providers: [],
