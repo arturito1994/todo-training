@@ -1,6 +1,12 @@
 <div class="row">
   <div class="row" style="width: 30rem" *ngFor="let hobbits of zmiany$ | async">
-    <img [src]="hobbits.imageUrl" class="card-img-top" [alt]="hobbits.name" />
+    <img
+      [src]="hobbits.imageUrl"
+      class="card-img-top"
+      [alt]="hobbits.name"
+      routerLink="/hobbici/hobbits.id"
+      (click)="onHobbitsClicked(hobbits)"
+    />
     <div class="card-body">
       <h5 class="card-title">{{ hobbits.name }}</h5>
       <h5 class="card-title">{{ hobbits.bio }}</h5>
