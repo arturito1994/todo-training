@@ -24,7 +24,6 @@ import {
 })
 export class HobbitsListComponent {
   zmiany$: Observable<HobbitsDTO[]> = this._getsAllHobbitsDto.getAll();
-
   constructor(
     @Inject(GETS_ALL_HOBBITS_DTO)
     private _getsAllHobbitsDto: GetsAllHobbitsDtoPort,

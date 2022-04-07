@@ -4,7 +4,7 @@
       [src]="hobbits.imageUrl"
       class="card-img-top"
       [alt]="hobbits.name"
-      routerLink="/hobbici/hobbits.id"
+      [routerLink]="'/hobbici/' + hobbits.id"
       (click)="onHobbitsClicked(hobbits)"
     />
     <div class="card-body">
