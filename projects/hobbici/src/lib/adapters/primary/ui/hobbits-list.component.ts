@@ -11,10 +11,6 @@ import {
   GETS_ALL_HOBBITS_DTO,
   GetsAllHobbitsDtoPort,
 } from '../../../application/ports/secondary/gets-all-hobbits.dto-port';
-import {
-  CONTEXT_DTO_STORAGE,
-  ContextDtoStoragePort,
-} from '../../../application/ports/secondary/context-dto.storage-port';
 
 @Component({
   selector: 'lib-hobbits-list',
@@ -26,12 +22,6 @@ export class HobbitsListComponent {
   zmiany$: Observable<HobbitsDTO[]> = this._getsAllHobbitsDto.getAll();
   constructor(
     @Inject(GETS_ALL_HOBBITS_DTO)
-    private _getsAllHobbitsDto: GetsAllHobbitsDtoPort,
-    @Inject(CONTEXT_DTO_STORAGE)
-    private _contextDtoStorage: ContextDtoStoragePort
+    private _getsAllHobbitsDto: GetsAllHobbitsDtoPort
   ) {}
-
-  onHobbitsClicked(hobbits: HobbitsDTO): void {
-    this._contextDtoStorage.next({ hobbitId: hobbits.id });
-  }
 }
